@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>starpath.js  example1</title>
+	<link rel="stylesheet" type="text/css" href="../starpath.css">
+   	<script src="../Circles/starpath.js"></script>
+ 	</head>
+	<body>
+	<div align="center">
+		<div id="example_div">
+			<h1>Example 1</h1>
+			<h2>Create a star in the middle of the div</h2>
+			<pre>
+var starpath  = new Starpath(document.getElementById('starfield'))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0,0).setAmplitude(0,0))
+animate(starpath);		
+			</pre>
+		</div>
+
+	</div>
+		<script>
+			 var starpath  = new Starpath(document.getElementById('example_div'))
+			 	.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0,0).setAmplitude(0,0))
+			 animate(starpath);		
+		</script>
+	</body>
+</html>
