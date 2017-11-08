@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>starpath.js  example3</title>
+	<link rel="stylesheet" type="text/css" href="../starpath.css">
+   	<script src="../Circles/starpath.js"></script>
+ 	</head>
+	<body>
+	<div align="center">
+		<div id="example_div">
+			<h1>Example 3</h1>
+			<h2>Create circle of moving stars</h2>
+			<pre>
+			 var starpath  = new Starpath(document.getElementById('example_div'))
+.addSprite(new Sprite().setSprite('../assets/star.png')
+.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.2).setPhase(0/6))
+.addSprite(new Sprite().setSprite('../assets/star.png')
+.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.2).setPhase(1/6))
+.addSprite(new Sprite().setSprite('../assets/star.png')
+.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.2).setPhase(2/6))
+.addSprite(new Sprite().setSprite('../assets/star.png')
+.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.2).setPhase(3/6))
+.addSprite(new Sprite().setSprite('../assets/star.png')
+.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.2).setPhase(4/6))
+.addSprite(new Sprite().setSprite('../assets/star.png')
+.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.2).setPhase(5/6))
+		
+animate(starpath);		
+			</pre>
+		</div>
+
+	</div>
+		<script>
+			 var starpath  = new Starpath(document.getElementById('example_div'))
+		 .addSprite(new Sprite().setSprite('../assets/star.png')
+				  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(1/5).setPhase(0/6))
+				 .addSprite(new Sprite().setSprite('../assets/star.png')
+				  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(1/5).setPhase(1/6))
+				 .addSprite(new Sprite().setSprite('../assets/star.png')
+				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(1/5).setPhase(2/6))
+				  .addSprite(new Sprite().setSprite('../assets/star.png')
+				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(1/5).setPhase(3/6))
+				  .addSprite(new Sprite().setSprite('../assets/star.png')
+				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(1/5).setPhase(4/6))
+				  .addSprite(new Sprite().setSprite('../assets/star.png')
+				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(1/5).setPhase(5/6))
+		
+animate(starpath);		
+		</script>
+	</body>
+</html>

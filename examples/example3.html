@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>starpath.js  example3</title>
+	<link rel="stylesheet" type="text/css" href="../starpath.css">
+   	<script src="../Circles/starpath.js"></script>
+ 	</head>
+	<body>
+	<div align="center">
+		<div id="example_div">
+			<h1>Example 3</h1>
+			<h2>Create 3 stars with zoom and position variations</h2>
+			<pre>
+var starpath  = new Starpath(document.getElementById('example_div'))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0,0).setZoom(2,2))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(-0.5,0).setAmplitude(0,0))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0.5,0).setAmplitude(0,0))
+animate(starpath);		
+			</pre>
+		</div>
+
+	</div>
+		<script>
+			 var starpath  = new Starpath(document.getElementById('example_div'))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0,0).setZoom(2,2).setAmplitude(0,0))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(-0.5,0).setAmplitude(0,0))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0.5,0).setAmplitude(0,0))
+animate(starpath);		
+		</script>
+	</body>
+</html>
