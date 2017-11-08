@@ -8,7 +8,7 @@
  	</head>
 	<body>
 	<div align="center">
-		<div id="example_div">
+		<div id="my_div" class = "example_div">
 			<h1>Example 2</h1>
 			<h2>Create a star making circles in the div</h2>
 			<pre>
@@ -20,7 +20,7 @@ animate(starpath);
 
 	</div>
 		<script>
-			 var starpath  = new Starpath(document.getElementById('example_div'))
+			 var starpath  = new Starpath(document.getElementById('my_div'))
 			 	.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0,0).setSpeed(1/8,1/8))
 			 animate(starpath);		
 		</script>

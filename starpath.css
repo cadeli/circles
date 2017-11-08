@@ -14,7 +14,7 @@ a:visited {
 	color: rgb(110, 154, 181);
 }
 
-#example_div {
+.example_div {
 	margin-top: 30px;
 	width: 80%;
 	text-align: center;

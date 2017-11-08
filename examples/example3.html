@@ -8,7 +8,7 @@
  	</head>
 	<body>
 	<div align="center">
-		<div id="example_div">
+		<div id="my_div" class = "example_div">
 			<h1>Example 3</h1>
 			<h2>Create 3 stars with zoom and position variations</h2>
 			<pre>
@@ -22,7 +22,7 @@ animate(starpath);
 
 	</div>
 		<script>
-			 var starpath  = new Starpath(document.getElementById('example_div'))
+			 var starpath  = new Starpath(document.getElementById('my_div'))
 .addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0,0).setZoom(2,2).setAmplitude(0,0))
 .addSprite(new Sprite().setSprite('../assets/star.png').setCenter(-0.5,0).setAmplitude(0,0))
 .addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0.5,0).setAmplitude(0,0))

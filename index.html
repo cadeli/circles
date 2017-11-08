@@ -11,54 +11,54 @@
 	https://opengameart.org/content/platformer-pack-redux-360-assets
 	</a>
 	<div align="center">
-		<div id="starfield">
+		<div id="my_div_1" class = "example_div">
 			<h1>Starfield</h1>
 		</div>
 
-		<div id="starfield2">
+		<div id="my_div_2" class = "example_div">
 		<h1>Starfield2</h1>
 		</div>
 
-		<div id="starfield3">
+		<div id="my_div_3" class = "example_div">
 		<h1>Starfield3</h1>
 		</div>
 
 	</div>
-		<script src="starpath.js"></script>
+		<script src="Circles/starpath.js"></script>
 		<script>
-			 var starpath  = new Starpath(document.getElementById('starfield'))
-			 	.addSprite(new Sprite().setSprite('gemBlue.png')
+			 var starpath  = new Starpath(document.getElementById('my_div_1'))
+			 	.addSprite(new Sprite().setSprite('assets/gemBlue.png')
 			 	 	.setCenter(0,0).setSpeed(0.5).setPhase(1/2)
 			 	 	.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
 			
-			 	.addSprite(new Sprite().setSprite('coinGold.png')
+			 	.addSprite(new Sprite().setSprite('assets/coinGold.png')
 			 	  	.setCenter(0,0).setAmplitude(1,1).setSpeed(0.5).setPhase(1)
 			 	  	.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
 			 animate(starpath);		
 
-			var starpath2  = new Starpath(document.getElementById('starfield2'))
-				 .addSprite(new Sprite().setSprite('star.png').setZoom(0.5,0.5)
+			var starpath2  = new Starpath(document.getElementById('my_div_2'))
+				 .addSprite(new Sprite().setSprite('assets/star.png').setZoom(0.5,0.5)
 				  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(0/6))
-				 .addSprite(new Sprite().setSprite('star.png').setZoomExt(6,3,0.5,0.5,1/4,1/4,0,0)
+				 .addSprite(new Sprite().setSprite('assets/star.png').setZoomExt(6,3,0.5,0.5,1/4,1/4,0,0)
 				  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(1/6))
-				 .addSprite(new Sprite().setSprite('star.png')
+				 .addSprite(new Sprite().setSprite('assets/star.png')
 				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(2/6))
-				  .addSprite(new Sprite().setSprite('star.png')
+				  .addSprite(new Sprite().setSprite('assets/star.png')
 				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(3/6))
-				  .addSprite(new Sprite().setSprite('star.png')
+				  .addSprite(new Sprite().setSprite('assets/star.png')
 				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(4/6))
-				  .addSprite(new Sprite().setZoom(3,3).setSprite('star.png')
+				  .addSprite(new Sprite().setZoom(3,3).setSprite('assets/star.png')
 				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(5/6))
 			animate(starpath2);		
 
-			 var starpath3  = new Starpath(document.getElementById('starfield3'))
-			 	 .addSprite(new Sprite().setSprite('star.png')
+			 var starpath3  = new Starpath(document.getElementById('my_div_3'))
+			 	 .addSprite(new Sprite().setSprite('assets/star.png')
 			 	  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(-0.4).setPhase(1/4))
-			 	  .addSprite(new Sprite().setSprite('coinGold.png')
+			 	  .addSprite(new Sprite().setSprite('assets/coinGold.png')
 			 	   	.setCenter(-0.5,0).setAmplitude(0.5,1).setSpeed(1/8))
-			 	  .addSprite(new Sprite().setSprite('gemBlue.png')
+			 	  .addSprite(new Sprite().setSprite('assets/gemBlue.png')
 			 	  	.setCenter(-0.6,-0.70).setAmplitude(0.2,0.2).setSpeed(1/16))
-			 	  .addSprite(new Sprite().setSprite('star.png')
+			 	  .addSprite(new Sprite().setSprite('assets/star.png')
 			 	  	.setCenter(0,0).setAmplitude(0.1,0.1).setSpeed(1/4));
 			 animate(starpath3);		
 
