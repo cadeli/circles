@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>starpath.js</title>
+	<link rel="stylesheet" type="text/css" href="starpath.css">
+	</head>
+	<body>
+	<h1>eeee</h1>
+	<a herf="https://opengameart.org/content/platformer-pack-redux-360-assets"> 
+	https://opengameart.org/content/platformer-pack-redux-360-assets
+	</a>
+	<div align="center">
+		<div id="starfield">
+			<h1>Starfield</h1>
+		</div>
+
+		<div id="starfield2">
+		<h1>Starfield2</h1>
+		</div>
+
+		<div id="starfield3">
+		<h1>Starfield3</h1>
+		</div>
+
+	</div>
+		<script src="starpath.js"></script>
+		<script>
+			 var starpath  = new Starpath(document.getElementById('starfield'))
+			 	.addSprite(new Sprite().setSprite('gemBlue.png')
+			 	 	.setCenter(0,0).setSpeed(0.5).setPhase(1/2)
+			 	 	.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
+			
+			 	.addSprite(new Sprite().setSprite('coinGold.png')
+			 	  	.setCenter(0,0).setAmplitude(1,1).setSpeed(0.5).setPhase(1)
+			 	  	.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
+			 animate(starpath);		
+
+			var starpath2  = new Starpath(document.getElementById('starfield2'))
+				 .addSprite(new Sprite().setSprite('star.png').setZoom(0.5,0.5)
+				  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(0/6))
+				 .addSprite(new Sprite().setSprite('star.png').setZoomExt(6,3,0.5,0.5,1/4,1/4,0,0)
+				  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(1/6))
+				 .addSprite(new Sprite().setSprite('star.png')
+				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(2/6))
+				  .addSprite(new Sprite().setSprite('star.png')
+				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(3/6))
+				  .addSprite(new Sprite().setSprite('star.png')
+				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(4/6))
+				  .addSprite(new Sprite().setZoom(3,3).setSprite('star.png')
+				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(5/6))
+			animate(starpath2);		
+
+			 var starpath3  = new Starpath(document.getElementById('starfield3'))
+			 	 .addSprite(new Sprite().setSprite('star.png')
+			 	  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(-0.4).setPhase(1/4))
+			 	  .addSprite(new Sprite().setSprite('coinGold.png')
+			 	   	.setCenter(-0.5,0).setAmplitude(0.5,1).setSpeed(1/8))
+			 	  .addSprite(new Sprite().setSprite('gemBlue.png')
+			 	  	.setCenter(-0.6,-0.70).setAmplitude(0.2,0.2).setSpeed(1/16))
+			 	  .addSprite(new Sprite().setSprite('star.png')
+			 	  	.setCenter(0,0).setAmplitude(0.1,0.1).setSpeed(1/4));
+			 animate(starpath3);		
+
+		</script>
+	</body>
+</html>
