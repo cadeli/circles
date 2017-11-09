@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>starpath.js  example5</title>
+	<link rel="stylesheet" type="text/css" href="../starpath.css">
+   	<script src="../Circles/starpath.js"></script>
+ 	</head>
+	<body>
+	<div align="center">
+		<div id="my_div" class = "example_div">
+			<h1>Example 5</h1>
+			<h2>More complex movements</h2>
+			<pre>
+var starpath  = new Starpath(document.getElementById('my_div'))
+.addSprite(new Sprite().setSprite('../assets/gemBlue.png')
+.setCenter(0,0).setSpeed(0.5).setPhase(1/2)
+.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
+			
+.addSprite(new Sprite().setSprite('../assets/coinGold.png')
+.setCenter(0,0).setSpeed(0.5).setPhase(1)
+.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
+animate(starpath);
+			</pre>
+		</div>
+
+	</div>
+		<script>
+			 var starpath  = new Starpath(document.getElementById('my_div'))
+			 	.addSprite(new Sprite().setSprite('../assets/gemBlue.png')
+			 	 	.setCenter(0,0).setSpeed(0.5).setPhase(1/2)
+			 	 	.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
+			
+			 	.addSprite(new Sprite().setSprite('../assets/coinGold.png')
+			 	  	.setCenter(0,0).setSpeed(0.5).setPhase(1)
+			 	  	.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
+			 animate(starpath);
+		</script>
+	</body>
+</html>

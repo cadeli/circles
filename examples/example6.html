@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>starpath.js  example6</title>
+	<link rel="stylesheet" type="text/css" href="../starpath.css">
+   	<script src="../Circles/starpath.js"></script>
+ 	</head>
+	<body>
+	<div align="center">
+		<div id="my_div" class = "example_div">
+			<h1>Example 6</h1>
+			<h2>Moving zoom</h2>
+			<pre>
+var starpath  = new Starpath(document.getElementById('my_div'))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0,0)
+.setZoomExt(6,6,0.5,0.5,1/16,1/16,0,0).setAmplitude(0.1,0.1))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(-0.5,0)
+.setZoomExt(6,1,0.5,0.5,1/8,1/8,1/3,1/3).setAmplitude(0,0.4))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0.5,0)
+.setZoomExt(1,6,0.5,0.5,1/4,1/4,1/3,1/3).setAmplitude(0.2,0))
+animate(starpath);
+			</pre>
+		</div>
+
+	</div>
+		<script>
+var starpath  = new Starpath(document.getElementById('my_div'))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0,0).setZoomExt(6,6,0.5,0.5,1/16,1/16,0,0).setAmplitude(0.1,0.1))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(-0.5,0).setZoomExt(6,1,0.5,0.5,1/8,1/8,1/3,1/3).setAmplitude(0,0.4))
+.addSprite(new Sprite().setSprite('../assets/star.png').setCenter(0.5,0).setZoomExt(1,6,0.5,0.5,1/4,1/4,1/3,1/3).setAmplitude(0.2,0))
+animate(starpath);
+		</script>
+	</body>
+</html>
