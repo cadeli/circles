@@ -165,8 +165,8 @@ Sprite.prototype = {
 	},
 
 	_computeOscillatorValue: function(time) {
-		var nPhase = this.phase*(4*Math.PI) *1000;
-		return (-1)*this.speed*((time *2*Math.PI+ nPhase)/1000 );
+		var nPhase = this.phase*(2*Math.PI) *1000;
+		return (-1)*this.speed*((time *2*Math.PI+ nPhase/this.speed)/1000 );
 	},
 
 	_computeAmplitudeX: function(time) {
