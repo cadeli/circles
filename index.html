@@ -5,65 +5,98 @@
 		<title>starpath.js</title>
 	<link rel="stylesheet" type="text/css" href="starpath.css">
 	</head>
-	<body>
-	<h1>assets are comming from :</h1>
-	<a href="https://opengameart.org/content/platformer-pack-redux-360-assets"> 
-	https://opengameart.org/content/platformer-pack-redux-360-assets
-	</a>
-	jsdoc -p -d doc Circles/starpath.js 
+	<body >
 
-	<div align="center">
-		<div id="my_div_1" class = "example_div">
-			<h1>Starfield</h1>
-		</div>
+<div align ="center">
+<h1 > Make circles with sprite in JS </h1>
 
-		<div id="my_div_2" class = "example_div">
-		<h1>Starfield2</h1>
-		</div>
+<h1>Examples / tutorial</h1>
+<ul>
+<li><a href="examples/example1.html">Example 1</a> </li>
+<li><a href="examples/example2.html">Example 2</a> </li>
+<li><a href="examples/example3.html">Example 3</a> </li>
+<li><a href="examples/example4.html">Example 4</a> </li>
+<li><a href="examples/example5.html">Example 5</a> </li>
+<li><a href="examples/example6.html">Example 6</a> </li>
+</ul>
 
-		<div id="my_div_3" class = "example_div">
-		<h1>Starfield3</h1>
-		</div>
+
+<h1>Documentation </h1>
+<a href="doc/index.html" > for devs </a>
+
+<h1> Mini Demo </h1>
+	<div align="center" id="aa" style="width:50%">
+	 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus odio eu enim convallis pulvinar. Vivamus eleifend sem vel mi varius, pellentesque pretium metus pretium. Suspendisse in nisi imperdiet, sollicitudin arcu at, aliquam tortor. Cras nisl sapien, egestas nec venenatis sed, sagittis sed mi. Duis dapibus ac enim eget rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae augue sit amet nisi elementum vehicula. Sed nisl dolor, aliquam quis orci vitae, tempus vehicula augue. Suspendisse a odio sed nunc interdum commodo ac ac ipsum. Donec facilisis venenatis condimentum. Cras quis condimentum nisl. Nullam sodales volutpat varius.
+	  Fusce ut lacus nec arcu consectetur vulputate. Pellentesque bibendum orci a arcu mollis ullamcorper. Donec at dolor vel est interdum dictum in eget quam. Phasellus volutpat nisl mauris, ac euismod mi porta vel. Suspendisse potenti. Aliquam in eleifend nulla. Sed ut nunc imperdiet, rhoncus lectus sit amet, feugiat elit. Donec placerat, nulla vitae malesuada consectetur, leo leo bibendum turpis, ac vestibulum tortor nibh hendrerit erat. Mauris pretium justo a lacus suscipit, vitae euismod purus congue. Aenean lacinia ultricies turpis, sit amet vestibulum turpis finibus vel. Fusce congue ullamcorper cursus.
+
+Sed tristique est quis nisi auctor commodo. Quisque dictum ultricies neque, vitae aliquet justo consequat ac. Aliquam consectetur viverra blandit. Etiam vitae molestie nisl. Curabitur in lectus quis arcu finibus tempus. Vestibulum malesuada, orci et suscipit condimentum, ipsum velit ornare dolor, ac imperdiet dolor lacus vitae enim. Nulla non risus congue elit rhoncus bibendum. Integer quam erat, hendrerit in dolor sed, rhoncus tincidunt velit. Morbi nec diam id metus consectetur tristique vitae in lectus. Cras non efficitur enim. In tristique eget sem luctus accumsan. Curabitur sem leo, maximus ac vulputate nec, efficitur vel urna. Duis in nisl sed enim egestas tempus at et est. Nunc velit quam, mattis quis lectus sed, elementum convallis augue.
+
 
 	</div>
-		<script src="Circles/starpath.js"></script>
-		<script>
-			 var starpath  = new Starpath(document.getElementById('my_div_1'))
-			 	.addSprite(new Sprite().setSprite('assets/gemBlue.png')
-			 	 	.setCenter(0,0).setSpeed(0.5).setPhase(1/2)
-			 	 	.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
-			
-			 	.addSprite(new Sprite().setSprite('assets/coinGold.png')
-			 	  	.setCenter(0,0).setAmplitude(1,1).setSpeed(0.5).setPhase(1)
-			 	  	.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
-			 animate(starpath);		
 
-			var starpath2  = new Starpath(document.getElementById('my_div_2'))
-				 .addSprite(new Sprite().setSprite('assets/star.png').setZoom(0.5,0.5)
-				  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(0/6))
-				 .addSprite(new Sprite().setSprite('assets/star.png').setZoomExt(6,3,0.5,0.5,1/4,1/4,0,0)
-				  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(1/6))
-				 .addSprite(new Sprite().setSprite('assets/star.png')
-				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(2/6))
-				  .addSprite(new Sprite().setSprite('assets/star.png')
-				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(3/6))
-				  .addSprite(new Sprite().setSprite('assets/star.png')
-				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(4/6))
-				  .addSprite(new Sprite().setZoom(3,3).setSprite('assets/star.png')
-				   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(5/6))
-			animate(starpath2);		
+	<br />
+	<br />
+	<br />
 
-			 var starpath3  = new Starpath(document.getElementById('my_div_3'))
-			 	 .addSprite(new Sprite().setSprite('assets/star.png')
-			 	  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(-0.4).setPhase(1/4))
-			 	  .addSprite(new Sprite().setSprite('assets/coinGold.png')
-			 	   	.setCenter(-0.5,0).setAmplitude(0.5,1).setSpeed(1/8))
-			 	  .addSprite(new Sprite().setSprite('assets/gemBlue.png')
-			 	  	.setCenter(-0.6,-0.70).setAmplitude(0.2,0.2).setSpeed(1/16))
-			 	  .addSprite(new Sprite().setSprite('assets/star.png')
-			 	  	.setCenter(0,0).setAmplitude(0.1,0.1).setSpeed(1/4));
-			 animate(starpath3);		
+	<div align="center" id="bb" style="width:30%" >
+	 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus odio eu enim convallis pulvinar. Vivamus eleifend sem vel mi varius, pellentesque pretium metus pretium. Suspendisse in nisi imperdiet, sollicitudin arcu at, aliquam tortor. Cras nisl sapien, egestas nec venenatis sed, sagittis sed mi. Duis dapibus ac enim eget rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae augue sit amet nisi elementum vehicula. Sed nisl dolor, aliquam quis orci vitae, tempus vehicula augue. Suspendisse a odio sed nunc interdum commodo ac ac ipsum. Donec facilisis venenatis condimentum. Cras quis condimentum nisl. Nullam sodales volutpat varius.
+	</div>
+	<br />
+	<br />
+	<br />
 
-		</script>
+	<div align="center" id="cc" style="width:30%" >
+	 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus odio eu enim convallis pulvinar. Vivamus eleifend sem vel mi varius, pellentesque pretium metus pretium. Suspendisse in nisi imperdiet, sollicitudin arcu at, aliquam tortor. Cras nisl sapien, egestas nec venenatis sed, sagittis sed mi. Duis dapibus ac enim eget rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae augue sit amet nisi elementum vehicula. Sed nisl dolor, aliquam quis orci vitae, tempus vehicula augue. Suspendisse a odio sed nunc interdum commodo ac ac ipsum. Donec facilisis venenatis condimentum. Cras quis condimentum nisl. Nullam sodales volutpat varius.
+	</div>
+
+<h1>Thanks </h1>
+	<p>assets are comming from :</p>
+	<a href="https://opengameart.org/content/platformer-pack-redux-360-assets"> 
+	https://opengameart.org/content/platformer-pack-redux-360-assets
+	</a><br/>
+	jsdoc -p -d doc Circles/starpath.js 
+
+</div>
+
+
+   	<script src="Circles/starpath.js"></script>
+	<script>
+		 var starpath  = new Starpath(document.getElementById('aa'))
+		 	.addSprite(new Sprite().setSprite('assets/gemBlue.png')
+		 	 	.setCenter(0,0).setSpeed(0.5).setPhase(1/2)
+		 	 	.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
+		
+		 	.addSprite(new Sprite().setSprite('assets/coinGold.png')
+		 	  	.setCenter(0,0).setAmplitude(1,1).setSpeed(0.5).setPhase(1)
+		 	  	.setAmplitudeExt(1,1,0,0,1/8,1/8,0,0))
+		 animate(starpath);		
+
+		var starpath2  = new Starpath(document.getElementById('bb'))
+			 .addSprite(new Sprite().setSprite('assets/star.png').setZoom(0.5,0.5)
+			  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(0/6))
+			 .addSprite(new Sprite().setSprite('assets/star.png').setZoomExt(6,3,0.5,0.5,1/4,1/4,0,0)
+			  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(1/6))
+			 .addSprite(new Sprite().setSprite('assets/star.png')
+			   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(2/6))
+			  .addSprite(new Sprite().setSprite('assets/star.png')
+			   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(3/6))
+			  .addSprite(new Sprite().setSprite('assets/star.png')
+			   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(4/6))
+			  .addSprite(new Sprite().setZoom(3,3).setSprite('assets/star.png')
+			   	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(0.5).setPhase(5/6))
+		animate(starpath2);		
+
+		 var starpath3  = new Starpath(document.getElementById('cc'))
+		 	 .addSprite(new Sprite().setSprite('assets/star.png')
+		 	  	.setCenter(0,0).setAmplitude(0.8,0.8).setSpeed(-0.4).setPhase(1/4))
+		 	  .addSprite(new Sprite().setSprite('assets/coinGold.png')
+		 	   	.setCenter(-0.5,0).setAmplitude(0.5,1).setSpeed(1/8))
+		 	  .addSprite(new Sprite().setSprite('assets/gemBlue.png')
+		 	  	.setCenter(-0.6,-0.70).setAmplitude(0.2,0.2).setSpeed(1/16))
+		 	  .addSprite(new Sprite().setSprite('assets/star.png')
+		 	  	.setCenter(0,0).setAmplitude(0.1,0.1).setSpeed(1/4));
+		 animate(starpath3);		
+
+	</script>
 	</body>
 </html>
