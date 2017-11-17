@@ -33,6 +33,8 @@ Starpath.prototype = {
 
 	/**
 	 * @param {Sprite} sprite The sprite to add
+	 * @return {Sprite} return this sprite, allow chaining
+	 * @chainable
 	 */
 	addSprite: function(sprite) {
 		this.parentDiv.appendChild(sprite.div);
@@ -68,12 +70,15 @@ Starpath.prototype = {
 
 /**
  * Represents a sprite.
+ * initialize default values
  * @constructor
+ * @return {Sprite} return this sprite, allow chaining
+ * @chainable
  */
 Sprite = function() {
 	this.div = document.createElement('div');
 	this.div.style.position = "absolute";
-	/*default values */
+
 	this.centerX = 0;
 	this.centerY = 0;
 	this.speed = 1;
@@ -107,7 +112,7 @@ Sprite.prototype = {
 	/**
 	 * set the picture of the sprite
 	 * @param {URL} imageUrl url of the image (can be relative to a PNG file)
-	 * @return {Sprite} return the class, alloaw chaining
+	 * @return {Sprite} return this sprite, allow chaining
 	 * @chainable
 	 */
 	setSprite: function(imageUrl) {
@@ -123,8 +128,9 @@ Sprite.prototype = {
 	/**
 	 * define the center of the path of the sprite
 	 * @param {Number} x x coordonate
-	 * @param {Numbr} y y coordonate
-	 * @return {Sprite} return the class, alloaw chaining
+	 * @param {Number} y y coordonate
+	 * @return {Sprite} return this sprite, allow chaining
+	 * @chainable
 	 */
 	setCenter: function(x, y) {
 		this.centerX = x;
@@ -132,16 +138,35 @@ Sprite.prototype = {
 		return this;
 	},
 
+	/**
+	 * define the speed of the sprite
+	 * @param {Number} value 1 = one circle per second
+	 * @return {Sprite} return this sprite, allow chaining
+	 * @chainable
+	 */
 	setSpeed: function(value) {
 		this.speed = value;
 		return this;
 	},
 
+	/**
+	 * define the phase of the sprite ( 2pi = one turn)
+	 * @param {Number} value of the phase
+	 * @return {Sprite} return this sprite, allow chaining
+	 * @chainable
+	 */
 	setPhase: function(value) {
 		this.phase = value;
 		return this;
 	},
 
+	/**
+	 * define fixed zoom of the sprite
+	 * @param {Number} zoomX zoom coeficient for width
+	 * @param {Nimber} zoomY zoom coeficient for heigth
+	 * @return {Sprite} return this sprite, allow chaining
+	 * @chainable
+	 */
 	setZoom: function(zoomX, zoomY) {
 		this.zoomMaxX = zoomX;
 		this.zoomMaxY = zoomY;
@@ -162,6 +187,13 @@ Sprite.prototype = {
 		return this;
 	},
 
+	/**
+	 * define the fixed amplitude of the path
+	 * @param {Number} maxX amplitude for width 1 = all the width of the div
+	 * @param {Number} maxY amplitude for height 1 = all the height of the div
+	 * @return {Sprite} return this sprite, allow chaining
+	 * @chainable
+	 */
 	setAmplitude: function(maxX, maxY) {
 		this.amplitudeMaxX = maxX;
 		this.amplitudeMaxY = maxY;
@@ -182,23 +214,40 @@ Sprite.prototype = {
 		return this;
 	},
 
+	/**
+	 * x position from time
+	 * @param  {Number} time (milliseconds form start)
+	 * @return {Number}  x pos in the div 
+	 * @private
+	 */
 	computePosXFromTime: function(time) {
 		return this.centerX + Math.sin(this._computeOscillatorValue(time)) * this._computeAmplitudeX(time);
 	},
 
+	/**
+	 * y position from time
+	 * @param  {Number} time (milliseconds form start)
+	 * @return {Number}  y pos in the div 
+	 * @private
+	 */
 	computePosYFromTime: function(time) {
 		return this.centerY + Math.cos(this._computeOscillatorValue(time)) * this._computeAmplitudeY(time);
 	},
 
+	/**
+	 * move the sprite to the x,y coordonates
+	 * @param  {Number} x x position
+	 * @param  {Number} y y position
+	 */
 	moveTo(x, y) {
 		this.div.style.left = x + 'px';
 		this.div.style.top = y + 'px';
 	},
 
 	/**
-	 * @private
 	 * @param  {Number} time in millisecond
 	 * @return {Number} oscillatorValue
+	 * @private
 	 */
 	_computeOscillatorValue: function(time) {
 		var nPhase = this.phase * (2 * Math.PI) * 1000;
@@ -223,6 +272,11 @@ Sprite.prototype = {
 		return ret;
 	},
 
+	/**
+	 * zoom the sprite to the zoomX,zoomY coeficients
+	 * @param  {Number} zoomX zoom for width
+	 * @param  {Number} zoomY zoom for height
+	 */
 	zoomTo(zoomX, zoomY) {
 		if (image = this.div.childNodes[0]) {
 			image.style.width = this.width * zoomX + 'px';
